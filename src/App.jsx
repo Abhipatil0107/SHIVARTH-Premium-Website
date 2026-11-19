@@ -1,4 +1,3 @@
-
 import CustomerAuth from "./CustomerAuth";
 import {
   ShoppingBag,
@@ -11,227 +10,183 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-
 const products = [
   {
     weight: "50g",
     name: "Daily Puja Wicks",
     detail: "For everyday prayers and daily rituals",
     tag: "DAILY ESSENTIAL",
-    image: "/images/wicks-50g.jpg",
+    image: "/images/simple-round-wicks.jpg",
   },
   {
     weight: "200g",
     name: "Family Collection",
     detail: "A thoughtful pack for your family",
     tag: "FAMILY FAVOURITE",
-    image: "/images/wicks-200g.jpg",
+    image: "/images/long-wicks.jpg",
   },
   {
     weight: "300g",
     name: "Value Collection",
     detail: "More devotion for everyday worship",
     tag: "VALUE PACK",
-    image: "/images/wicks-300g.jpg",
+    image: "/images/thick-wicks.jpg",
   },
 ];
-
 
 const wickTypes = [
   {
     name: "Simple Cotton Wicks",
     detail: "For everyday worship and daily rituals",
-    symbol: "✦",
+    image: "/images/simple-round-wicks.jpg",
   },
   {
     name: "Long Cotton Wicks",
     detail: "Designed for traditional lamps",
-    symbol: "〰",
+    image: "/images/long-wicks.jpg",
   },
   {
     name: "Thick Cotton Wicks",
     detail: "For a steady traditional flame",
-    symbol: "✺",
+    image: "/images/thick-wicks.jpg",
   },
   {
     name: "Phool Vati",
     detail: "Beautiful flower-shaped cotton wicks",
-    symbol: "❀",
+    image: "/images/flower-wicks.jpg",
   },
   {
     name: "Samai Vati",
     detail: "For traditional samai and lamps",
-    symbol: "✧",
+    image: "/images/samai-wicks.jpg",
   },
   {
     name: "Twisted Vati",
     detail: "Traditional twisted cotton wicks",
-    symbol: "≈",
+    image: "/images/twisted-wicks.jpg",
   },
 ];
 
-function App() {
-  const whatsappLink =
-    "https://wa.me/919359183419?text=" +
-    encodeURIComponent(
-      "Hello SHIVARTH, I would like to know about your cotton wicks."
-    );
+const whatsappLink =
+  "https://wa.me/919359183419?text=Hello%20SHIVARTH%2C%20I%20want%20to%20enquire%20about%20cotton%20wicks.";
 
+function App() {
   return (
     <div className="website">
       <div className="announcement">
-        <span>✦ PURE COTTON</span>
-        <span>MADE WITH CARE</span>
-        <span>MADE FOR EVERY PRAYER ✦</span>
+        <span>PURE COTTON WICKS</span>
+        <span>MADE FOR YOUR DAILY DEVOTION</span>
       </div>
 
-      <nav className="navbar">
-        <a href="#home" className="brand">
-          <span className="brand-symbol">✦</span>
+      <header className="navbar">
+        <a className="brand" href="#home" aria-label="SHIVARTH home">
+          <span className="brand-symbol">ॐ</span>
           <span>
             <strong>SHIVARTH</strong>
-            <small>PURE DEVOTION. PURE LIFE.</small>
+            <small>DIVINITY IN EVERY THREAD</small>
           </span>
         </a>
 
-        <div className="nav-links">
-          <a href="#customer-login">Login</a>
+        <nav className="nav-links" aria-label="Main navigation">
           <a href="#home">Home</a>
-          <a href="#products">Collections</a>
+          <a href="#collections">Collections</a>
           <a href="#wick-types">Wick Types</a>
-          <a href="#about">Our Story</a>
+          <a href="#story">Our Story</a>
           <a href="#contact">Contact</a>
-        </div>
+        </nav>
 
-        <a href="#products" className="nav-button">
-          <ShoppingBag size={15} />
-          Explore Shop
+        <a className="nav-button" href={whatsappLink} target="_blank" rel="noreferrer">
+          <ShoppingBag size={16} />
+          Enquire Now
         </a>
-      </nav>
+      </header>
 
       <main>
-        {/* CUSTOMER LOGIN */}
         <CustomerAuth />
 
-        {/* HERO SECTION */}
-      
+        <section className="hero" id="home">
           <div className="hero-content">
-            <span className="eyebrow">✦ THE PURE ART OF DEVOTION</span>
-
+            <span className="eyebrow">
+              <Sparkles size={15} /> A LITTLE LIGHT, A LOT OF FAITH
+            </span>
             <h1>
-              A Little Wick.
+              Bring home the
               <br />
-              <em>A Brighter Prayer.</em>
+              warmth of <em>devotion.</em>
             </h1>
-
             <p>
-              Every beautiful prayer deserves a pure beginning.
-              Discover thoughtfully crafted cotton wicks made
-              for your everyday moments of devotion.
+              Thoughtfully made cotton wicks for your everyday prayers,
+              traditional lamps and special moments of worship.
             </p>
 
             <div className="hero-actions">
-              <a href="#products" className="primary-button">
-                DISCOVER COLLECTION <ArrowRight size={16} />
+              <a className="primary-button" href="#collections">
+                Explore Collections <ArrowRight size={16} />
               </a>
-
-              <a href="#about" className="text-button">
-                Our Story →
-              </a>
+              <a href="#wick-types">Discover wick types</a>
             </div>
 
             <div className="hero-caption">
-              CRAFTED WITH CARE · INSPIRED BY TRADITION
+              SIMPLE • TRADITIONAL • MADE WITH CARE
             </div>
           </div>
 
-         
-
-<div className="hero-visual">
-  <div className="hero-photo-frame">
-    <img
-      
-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/A_lit_Diyo.jpg/960px-A_lit_Diyo.jpg"
-
-      alt="Traditional brass diya with a burning cotton wick"
-      className="hero-real-image"
-    />
-    <div className="photo-caption">
-      <span>THE LIGHT OF DEVOTION</span> 
-      <break> </break>
-      <strong>Made for every prayer.</strong>
-    </div>
-  </div>
-</div>
-
-
-
-        {/* FEATURES */}
-        <section className="features">
-          <div className="feature-item">
-            <Leaf size={20} />
-            <span>Pure Cotton</span>
-          </div>
-
-          <div className="feature-item">
-            <Heart size={20} />
-            <span>Made With Care</span>
-          </div>
-
-          <div className="feature-item">
-            <ShieldCheck size={20} />
-            <span>Quality Focused</span>
-          </div>
-
-          <div className="feature-item">
-            <Sparkles size={20} />
-            <span>Everyday Devotion</span>
+          <div className="hero-visual">
+            <div className="hero-circle">
+              <span className="hero-diya" role="img" aria-label="Lit diya">
+                🪔
+              </span>
+            </div>
+            <span className="hero-side-note">LIGHT • FAITH • TRADITION</span>
           </div>
         </section>
 
-        {/* PRODUCT COLLECTIONS */}
-        <section className="products" id="products">
+        <section className="features" aria-label="SHIVARTH values">
+          <div className="feature-item">
+            <Leaf size={22} />
+            <span>Cotton Wicks</span>
+          </div>
+          <div className="feature-item">
+            <ShieldCheck size={22} />
+            <span>Carefully Selected</span>
+          </div>
+          <div className="feature-item">
+            <Heart size={22} />
+            <span>Made for Devotion</span>
+          </div>
+          <div className="feature-item">
+            <Sparkles size={22} />
+            <span>Everyday Pooja Essentials</span>
+          </div>
+        </section>
+
+        <section className="products" id="collections">
           <div className="section-heading">
             <span className="eyebrow">THE SHIVARTH COLLECTION</span>
-            <h2>
-              Find a Pack That Fits <em>Your Prayer.</em>
-            </h2>
-            <p>
-              Thoughtfully packed cotton wicks for every home.
-            </p>
+            <h2>Made for every <em>prayer.</em></h2>
+            <p>Choose a pack that suits your home and daily worship needs.</p>
           </div>
 
           <div className="product-grid">
             {products.map((product) => (
               <article className="product-card" key={product.weight}>
-                
-<div className="product-image">
-  <img
-    src={product.image}
-    alt={`${product.name} pure cotton wicks`}
-    className="product-real-image"
-  />
-  <span className="image-weight">{product.weight}</span>
-</div>
-
+                <div className="product-image">
+                  <img
+                    className="product-real-image"
+                    src={product.image}
+                    alt={`${product.name} cotton wicks`}
+                    loading="lazy"
+                  />
+                  <span className="image-weight">{product.weight}</span>
+                </div>
                 <div className="product-info">
                   <span className="product-tag">{product.tag}</span>
                   <h3>{product.name}</h3>
                   <p>{product.detail}</p>
-
                   <div className="product-bottom">
-                    <span>Price on Request</span>
-                    <a
-                      href={
-                        "https://wa.me/919359183419?text=" +
-                        encodeURIComponent(
-                          `Hello SHIVARTH, I am interested in ${product.name} (${product.weight}). Please share details.`
-                        )
-                      }
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Enquire →
+                    <strong>Price on Request</strong>
+                    <a href={`${whatsappLink}%20Pack:%20${encodeURIComponent(product.weight)}`} target="_blank" rel="noreferrer">
+                      Enquire <ArrowRight size={14} />
                     </a>
                   </div>
                 </div>
@@ -240,43 +195,32 @@ src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/A_lit_Diyo.jpg/96
           </div>
         </section>
 
-        {/* WICK TYPES */}
         <section className="products wick-section" id="wick-types">
           <div className="section-heading">
-            <span className="eyebrow">MADE FOR EVERY TRADITION</span>
-            <h2>
-              Every Wick Has <em>Its Purpose.</em>
-            </h2>
-            <p>
-              Explore different cotton wick styles for your rituals.
-            </p>
+            <span className="eyebrow">FIND YOUR EVERYDAY ESSENTIAL</span>
+            <h2>Explore our <em>wick types.</em></h2>
+            <p>Different shapes for different lamps, rituals and traditions.</p>
           </div>
 
           <div className="product-grid">
             {wickTypes.map((wick) => (
               <article className="product-card wick-card" key={wick.name}>
                 <div className="product-image wick-image">
-                  <span className="wick-symbol">{wick.symbol}</span>
+                  <img
+                    className="product-real-image"
+                    src={wick.image}
+                    alt={wick.name}
+                    loading="lazy"
+                  />
                 </div>
-
                 <div className="product-info">
-                  <span className="product-tag">SHIVARTH WICK SERIES</span>
+                  <span className="product-tag">SHIVARTH WICK RANGE</span>
                   <h3>{wick.name}</h3>
                   <p>{wick.detail}</p>
-
                   <div className="product-bottom">
-                    <span>Enquire for details</span>
-                    <a
-                      href={
-                        "https://wa.me/919359183419?text=" +
-                        encodeURIComponent(
-                          `Hello SHIVARTH, I want to know about ${wick.name}.`
-                        )
-                      }
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Enquire →
+                    <span>Available on enquiry</span>
+                    <a href={`${whatsappLink}%20Product:%20${encodeURIComponent(wick.name)}`} target="_blank" rel="noreferrer">
+                      Ask us <ArrowRight size={14} />
                     </a>
                   </div>
                 </div>
@@ -285,140 +229,55 @@ src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/A_lit_Diyo.jpg/96
           </div>
         </section>
 
-        {/* OUR STORY */}
-        <section className="story" id="about">
+        <section className="story" id="story">
           <div className="story-content">
-            <span className="eyebrow">THE STORY OF SHIVARTH</span>
-
-            <h2>
-              Tradition in Every Wick.
-              <br />
-              <em>Devotion in Every Flame.</em>
-            </h2>
-
+            <span className="eyebrow">OUR THOUGHT, OUR PROMISE</span>
+            <h2>A brighter moment begins with a <em>single flame.</em></h2>
             <p>
-              SHIVARTH is built around a simple thought:
-              every prayer begins with a little light.
-              Our brand brings traditional cotton wicks
-              closer to everyday homes with care and simplicity.
+              At SHIVARTH, we believe that everyday rituals deserve thoughtful
+              essentials. Our cotton wick collection brings together familiar
+              traditions and the simple warmth of prayer at home.
             </p>
-
-            <a href="#contact" className="primary-button">
-              KNOW MORE <ArrowRight size={16} />
+            <a className="primary-button" href="#contact">
+              Connect with SHIVARTH <ArrowRight size={16} />
             </a>
           </div>
-
           <div className="story-symbol">
-            <span>✦</span>
+            <span>ॐ</span>
             <strong>SHIVARTH</strong>
-            <small>PURE DEVOTION. PURE LIFE.</small>
+            <small>DIVINITY IN EVERY THREAD</small>
           </div>
         </section>
 
-        {/* WHY SHIVARTH */}
-        <section className="products why-section">
-          <div className="section-heading">
-            <span className="eyebrow">THE SHIVARTH PROMISE</span>
-            <h2>
-              Small Details. <em>Meaningful Moments.</em>
-            </h2>
-          </div>
-
-          <div className="product-grid">
-            <article className="product-card">
-              <div className="product-image why-icon">
-                <Leaf size={38} />
-              </div>
-              <div className="product-info">
-                <h3>Carefully Selected</h3>
-                <p>
-                  Our focus is on cotton wick quality and consistency.
-                </p>
-              </div>
-            </article>
-
-            <article className="product-card">
-              <div className="product-image why-icon">
-                <Heart size={38} />
-              </div>
-              <div className="product-info">
-                <h3>Made With Care</h3>
-                <p>
-                  Thoughtful products for your everyday rituals.
-                </p>
-              </div>
-            </article>
-
-            <article className="product-card">
-              <div className="product-image why-icon">
-                <Sparkles size={38} />
-              </div>
-              <div className="product-info">
-                <h3>Inspired By Tradition</h3>
-                <p>
-                  Keeping the beauty of traditional worship alive.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        {/* CONTACT */}
         <section className="contact-section" id="contact">
           <span className="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</span>
-          <h2>
-            Let's Make Every Prayer <em>Brighter.</em>
-          </h2>
-          <p>
-            For product enquiries, bulk orders and business
-            enquiries, connect with SHIVARTH.
-          </p>
-
-          <a
-            href={whatsappLink}
-            target="_blank"
-            rel="noreferrer"
-            className="primary-button"
-          >
-            <MessageCircle size={17} />
-            CHAT ON WHATSAPP
-          </a>
-
+          <h2>Let’s make your next prayer <em>brighter.</em></h2>
+          <p>For product details, pack sizes and bulk enquiries, contact us on WhatsApp.</p>
           <p className="contact-number">+91 93591 83419</p>
+          <a className="primary-button" href={whatsappLink} target="_blank" rel="noreferrer">
+            <MessageCircle size={17} /> Chat on WhatsApp
+          </a>
         </section>
       </main>
 
-      {/* FOOTER */}
       <footer>
         <div className="footer-brand">
           <strong>SHIVARTH</strong>
-          <span>PURE DEVOTION. PURE LIFE.</span>
+          <span>DIVINITY IN EVERY THREAD</span>
         </div>
-
-        <p>Tradition in every wick. Devotion in every flame.</p>
-
+        <p>Thoughtful cotton wicks for everyday devotion.</p>
         <div className="footer-links">
           <a href="#home">Home</a>
-          <a href="#products">Collections</a>
-          <a href="#about">Our Story</a>
+          <a href="#collections">Collections</a>
+          <a href="#wick-types">Wick Types</a>
           <a href="#contact">Contact</a>
         </div>
-
-        <small>
-          © {new Date().getFullYear()} SHIVARTH. All Rights Reserved.
-        </small>
+        <small>© {new Date().getFullYear()} SHIVARTH. All rights reserved.</small>
       </footer>
 
-      {/* FLOATING WHATSAPP */}
-      <a
-        href={whatsappLink}
-        className="whatsapp"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Chat with SHIVARTH on WhatsApp"
-      >
+      <a className="whatsapp" href={whatsappLink} target="_blank" rel="noreferrer">
         <MessageCircle size={19} />
-        <span>WhatsApp</span>
+        WhatsApp
       </a>
     </div>
   );

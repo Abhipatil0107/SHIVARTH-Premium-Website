@@ -1515,3 +1515,34 @@ footer > small {
 .product-bottom {
   border-top: 1px solid #e4ddcf;
 }
+/* SHIVARTH Product Images */
+.product-real-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  padding: 12px;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-real-image {
+  transform: scale(1.06);
+}
+
+.product-image {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  position: relative;
+  background: #eee3d3;
+}
+
+.wick-image {
+  height: 260px;
+  background: #f7f1e7;
+}
+
+.wick-image .product-real-image {
+  padding: 18px;
+}

@@ -14,12 +14,30 @@ import { auth } from "./firebase";
 import "./CustomerAuth.css";
 
 const wickTypes = [
-  { image: "/images/simple-vati.jpg", name: "Simple Vati" },
-  { image: "/images/long-vati.jpg", name: "Long Vati" },
-  { image: "/images/thick-vati.jpg", name: "Thick Vati" },
-  { image: "/images/phool-vati.jpg", name: "Phool Vati" },
-  { image: "/images/samai-vati.jpg", name: "Samai Vati" },
-  { image: "/images/twisted-vati.jpg", name: "Twisted Vati" }
+  {
+    name: "Simple Vati",
+    image: "/images/simple-round-wicks.jpg",
+  },
+  {
+    name: "Long Vati",
+    image: "/images/long-wicks.jpg",
+  },
+  {
+    name: "Thick Vati",
+    image: "/images/thick-wicks.jpg",
+  },
+  {
+    name: "Phool Vati",
+    image: "/images/flower-wicks.jpg",
+  },
+  {
+    name: "Samai Vati",
+    image: "/images/samai-wicks.jpg",
+  },
+  {
+    name: "Twisted Vati",
+    image: "/images/twisted-wicks.jpg",
+  },
 ];
 
 export default function CustomerAuth() {
